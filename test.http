@@ -1,0 +1,28 @@
+### Health Check
+GET http://127.0.0.1:5000/ping
+###
+
+### Register User
+POST http://127.0.0.1:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "test@gmail.com",
+  "password": "123456"
+}
+###
+
+### Login User
+POST http://127.0.0.1:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "123456"
+}
+###
+
+### Protected Profile Route
+GET http://127.0.0.1:5000/api/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NGU2Zjc0YzU0ZTRkZWU1MTNkMzIxOCIsImlhdCI6MTc2Njc0ODM4NCwiZXhwIjoxNzY2NzUxOTg0fQ.4gyF2KJcCkg9dz-P93PXXtJ68424V_OOWiCHOTvetbE
